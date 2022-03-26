@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/House.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Test House.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 48, 23.5 )
+
+[sub_resource type="Theme" id=2]
+
+[node name="House" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="HouseBack" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HouseBack"]
+polygon = PoolVector2Array( -48, -24, 1, -64, 48, -24, 48, 17, -48, 17 )
+
+[node name="HouseGround" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HouseGround"]
+position = Vector2( 0, 40.5 )
+shape = SubResource( 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = -18.0
+margin_top = 14.0
+margin_right = 17.0
+margin_bottom = 64.0
+theme = SubResource( 2 )
+button_mask = 2
+flat = true
+
+[connection signal="body_entered" from="HouseBack" to="." method="_on_HouseBack_body_entered"]
+[connection signal="body_exited" from="HouseBack" to="." method="_on_HouseBack_body_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

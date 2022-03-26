@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Bed.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/HouseInside.gd" type="Script" id=4]
+
+[node name="HouseInside" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Bed" parent="." instance=ExtResource( 2 )]
+position = Vector2( 897, 318 )
+
+[node name="OnBed" type="Position2D" parent="."]
+position = Vector2( 825, 318 )
+
+[node name="In" type="Position2D" parent="."]
+position = Vector2( 467, 331 )
