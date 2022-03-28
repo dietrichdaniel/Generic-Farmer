@@ -8,7 +8,7 @@ var in_range = false
 func _ready():
 	pass
 
-func _on_Door_pressed():
+func _pressed():
 	if in_range == true:
 		get_tree().change_scene_to(target_scene)
 	

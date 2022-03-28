@@ -11,6 +11,8 @@ func _physics_process(delta):
 
 	motion = move_and_slide(motion)
 
+	if Input.is_action_just_pressed("ui_accept"):
+		get_tree().reload_current_scene()
 
 	if Input.is_action_pressed("Up"):
 		motion.y = -SPEED

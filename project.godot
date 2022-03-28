@@ -41,6 +41,11 @@ Right={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_32="Range"
+
 [physics]
 
 common/enable_pause_aware_picking=true

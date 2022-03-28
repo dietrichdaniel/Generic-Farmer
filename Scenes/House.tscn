@@ -1,17 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/House.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Test House.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/HouseInside.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scripts/Door.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Door.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48, 23.5 )
-
-[sub_resource type="Theme" id=2]
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 78.5, 44 )
 
 [node name="House" type="Node2D"]
 script = ExtResource( 1 )
@@ -36,31 +30,7 @@ __meta__ = {
 position = Vector2( 0, 40.5 )
 shape = SubResource( 1 )
 
-[node name="Door" type="Button" parent="."]
-margin_left = -18.0
-margin_top = 14.0
-margin_right = 17.0
-margin_bottom = 64.0
-theme = SubResource( 2 )
-button_mask = 2
-flat = true
-script = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-target_scene = ExtResource( 3 )
-
-[node name="DoorRange" type="Area2D" parent="Door"]
-position = Vector2( 18, 50 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/DoorRange"]
-position = Vector2( 0.5, -3 )
-shape = SubResource( 3 )
+[node name="Door" parent="." instance=ExtResource( 3 )]
 
 [connection signal="body_entered" from="HouseBack" to="." method="_on_HouseBack_body_entered"]
 [connection signal="body_exited" from="HouseBack" to="." method="_on_HouseBack_body_exited"]
-[connection signal="pressed" from="Door" to="Door" method="_on_Door_pressed"]
-[connection signal="body_entered" from="Door/DoorRange" to="Door" method="_on_DoorRange_body_entered"]
