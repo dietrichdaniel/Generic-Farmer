@@ -17,8 +17,6 @@ func _on_HouseBack_body_exited(body):
 		$Sprite.modulate.a = 1
 
 
-func _on_Button_pressed():
-	var H = preload("res://Scenes/HouseInside.tscn")
-	get_tree().change_scene_to(H)
-	
-	pass
+
+
+
