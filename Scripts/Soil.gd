@@ -10,8 +10,9 @@ func _ready():
 	if soil_name in Global.soil_list:
 		has_crop = true
 		var soil_pos = Global.soil_list.find(soil_name)
-
+		
 		Global.crop_days[soil_pos] -= 1
+		
 		if Global.crop_days[soil_pos] == 0:
 			Global.crop_days.remove(soil_pos)
 			Global.soil_list.remove(soil_pos)
@@ -21,9 +22,12 @@ func _ready():
 
 
 func _on_Button_pressed():
+	print(has_crop, "foi")
 	if has_crop == false:
 		var c = Crop.instance()
 		get_parent().add_child(c)
+		c.position = $Position2D.position
+		
 		Global.soil_list.append(name)
 		has_crop = true
 		

@@ -12,5 +12,14 @@ position = Vector2( 266, 214 )
 [node name="Soil" parent="." instance=ExtResource( 3 )]
 position = Vector2( 360, 230 )
 
+[node name="Soil2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 439, 297 )
+
+[node name="Soil3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 362, 299 )
+
+[node name="Soil4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 438, 228 )
+
 [node name="House" parent="." instance=ExtResource( 1 )]
 position = Vector2( 166, 193 )
