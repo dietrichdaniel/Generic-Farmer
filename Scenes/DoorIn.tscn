@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 78.5, 44 )
 
-[node name="Door" type="Button"]
+[node name="DoorIn" type="Button"]
 margin_left = -18.0
 margin_top = 14.0
 margin_right = 17.0
@@ -17,14 +17,15 @@ theme = SubResource( 2 )
 button_mask = 2
 flat = true
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
 target_scene = ExtResource( 1 )
 
 [node name="DoorRange" type="Area2D" parent="."]
 position = Vector2( 18, 50 )
 collision_layer = 2147483648
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorRange"]
 position = Vector2( 0.5, -3 )

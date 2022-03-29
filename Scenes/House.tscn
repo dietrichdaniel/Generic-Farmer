@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Scripts/House.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Test House.png" type="Texture" id=2]
-[ext_resource path="res://Scenes/Door.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/DoorIn.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48, 23.5 )
@@ -31,6 +31,9 @@ position = Vector2( 0, 40.5 )
 shape = SubResource( 1 )
 
 [node name="Door" parent="." instance=ExtResource( 3 )]
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 0, 83 )
 
 [connection signal="body_entered" from="HouseBack" to="." method="_on_HouseBack_body_entered"]
 [connection signal="body_exited" from="HouseBack" to="." method="_on_HouseBack_body_exited"]
