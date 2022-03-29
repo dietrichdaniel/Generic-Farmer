@@ -5,6 +5,7 @@ const SPEED = 150
 var motion = Vector2()
 
 func _ready():
+	print(Global.day_count)
 	pass 
 
 func _physics_process(delta):

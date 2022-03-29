@@ -10,6 +10,6 @@ func _ready():
 
 
 func crop_frame(soil_pos):
-	var frame = 3 - Global.crop_time[soil_pos]
+	var frame = Global.day_count - Global.crop_time[soil_pos]
 	$Sprite.set_frame(frame)
 
