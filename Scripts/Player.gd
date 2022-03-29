@@ -5,6 +5,8 @@ const SPEED = 150
 var motion = Vector2()
 
 func _ready():
+	print(Global.soil_planted)
+	print(Global.crop_time)
 	pass 
 
 func _physics_process(delta):
