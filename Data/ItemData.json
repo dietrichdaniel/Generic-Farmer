@@ -1,0 +1,30 @@
+{
+	"Sword": {
+		
+		"ItemCategory": "Sword",
+		"ItemAttack": 3,
+		"ItemSpeed": 1,
+		"StackSize": 1,
+		"Description": "A sword."
+	
+	},
+
+	"Hoe": {
+	
+		"ItemCategory": "Hoe",
+		"ItemAttack": 1,
+		"ItemSpeed" : 0.75,
+		"StackSize" : 1,
+		"Description" : "A hoe, use it to plow the soil."
+		
+	},
+	
+	"Wheat Seeds": {
+
+		"ItemCategory": "Seeds",
+		"CropType" : "Wheat",
+		"StackSize": 99,
+		"Description" : "A bag of wheat seeds, grow in 4 days."
+
+	}
+}
