@@ -4,6 +4,7 @@ const SPEED = 150
 
 var motion = Vector2()
 
+
 func _ready():
 	print(Global.day_count)
 	pass 
@@ -11,10 +12,13 @@ func _ready():
 func _physics_process(delta):
 
 	motion = move_and_slide(motion)
+	
 
 	if Input.is_action_just_pressed("ui_accept"):
-		get_tree().reload_current_scene()
-
+		var soil = load("res://Scenes/Soil.tscn").instance()
+		get_parent().add_child(soil)
+		soil.global_position = get_global_mouse_position()
+		
 	if Input.is_action_pressed("Up"):
 		motion.y = -SPEED
 
