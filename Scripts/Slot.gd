@@ -15,6 +15,8 @@ func pickFromSlot():
 	remove_child(item)
 	var inventory_node = find_parent("Inventory")
 	inventory_node.add_child(item)
+	item.scale.x = .5
+	item.scale.y = .5
 	item = null
 
 
