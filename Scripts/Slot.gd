@@ -2,6 +2,7 @@ extends Panel
 
 var item_class = preload("res://Scenes/Item.tscn")
 var item = null
+var slot_index
 
 func _ready():
 	
@@ -28,3 +29,11 @@ func putIntoSlot(new_item):
 	var inventory_node = find_parent("Inventory")
 	inventory_node.remove_child(item)
 	add_child(item)
+
+func initialize_item(item_name, item_quantity):
+	if item == null:
+		item = item_class.instance()
+		add_child(item)
+		item.set_item(item_name, item_quantity)
+	else:
+		item.set_item(item_name, item_quantity)

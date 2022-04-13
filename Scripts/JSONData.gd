@@ -15,3 +15,4 @@ func load_data(file_path):
 	json_data = JSON.parse(file_data.get_as_text())
 	file_data.close()
 	return json_data.result
+	

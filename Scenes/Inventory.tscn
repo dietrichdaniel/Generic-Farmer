@@ -12,9 +12,9 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = -154.0
+margin_left = -125.0
 margin_top = -154.0
-margin_right = 872.0
+margin_right = 901.0
 margin_bottom = 879.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 1 )
