@@ -12,6 +12,3 @@ rect_min_size = Vector2( 150, 150 )
 mouse_filter = 1
 custom_styles/panel = SubResource( 1 )
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}

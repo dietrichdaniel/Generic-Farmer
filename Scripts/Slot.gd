@@ -3,6 +3,12 @@ extends Panel
 var item_class = preload("res://Scenes/Item.tscn")
 var item = null
 var slot_index
+var slot_type
+
+enum SlotType {
+	HOTBAR = 0,
+	INVENTORY,
+}
 
 func _ready():
 	
